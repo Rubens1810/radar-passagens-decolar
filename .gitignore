@@ -1,8 +1,43 @@
-.env
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+eggs/
+
+# Ambiente Virtual
 venv/
 .venv/
-*.pyc
-.DS_Store
+ENV/
+env/
+
+# Variáveis de Ambiente e Segredos
+.env
+.env.*
+
+# Banco de Dados Local e Logs
 data/
 *.db
+*.sqlite
+*.sqlite3
+debug_*.png
+
+# Build e Empacotamento AWS Lambda
+build/
+*.zip
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform.lock.hcl
+
+# IDEs e Sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
