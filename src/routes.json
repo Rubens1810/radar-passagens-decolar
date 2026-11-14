@@ -1,0 +1,12 @@
+[
+  {
+    "origin": "SAO",
+    "destination": "BUE",
+    "departure_date": "2027-04-15"
+  },
+  {
+    "origin": "SAO",
+    "destination": "REC",
+    "departure_date": "2027-05-10"
+  }
+]
