@@ -1,12 +1,18 @@
 [
   {
-    "origin": "GRU",
-    "destination": "EZE",
-    "departure_date": "2027-04-15"
+    "trip_name": "São Paulo -> Buenos Aires",
+    "origins": ["GRU", "CGH"],
+    "destinations": ["EZE", "AEP"],
+    "departure_date": "2027-04-15",
+    "flexible_days": 1,
+    "target_price": 1300.00
   },
   {
-    "origin": "GRU",
-    "destination": "REC",
-    "departure_date": "2027-05-10"
+    "trip_name": "São Paulo -> Recife",
+    "origins": ["GRU", "CGH"],
+    "destinations": ["REC"],
+    "departure_date": "2027-05-10",
+    "flexible_days": 1,
+    "target_price": 750.00
   }
 ]
