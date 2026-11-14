@@ -76,3 +76,39 @@ class PriceRepository:
             ),
         )
         self.conn.commit()
+
+    def get_history(self, trip_name: str | None = None, limit: int = 50) -> list[dict]:
+        if trip_name:
+            pk = self._build_pk(trip_name)
+            cursor = self.conn.execute(
+                """
+                SELECT trip_name, route, departure_date, airline, price, notified, sk
+                FROM price_history
+                WHERE pk = ?
+                ORDER BY sk DESC LIMIT ?
+                """,
+                (pk, limit),
+            )
+        else:
+            cursor = self.conn.execute(
+                """
+                SELECT trip_name, route, departure_date, airline, price, notified, sk
+                FROM price_history
+                ORDER BY sk DESC LIMIT ?
+                """,
+                (limit,),
+            )
+
+        rows = cursor.fetchall()
+        return [
+            {
+                "trip_name": r[0],
+                "route": r[1],
+                "departure_date": r[2],
+                "airline": r[3],
+                "price": r[4],
+                "notified": bool(r[5]),
+                "collected_at": r[6],
+            }
+            for r in rows
+        ]    
