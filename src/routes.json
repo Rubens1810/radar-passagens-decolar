@@ -1,11 +1,11 @@
 [
   {
-    "origin": "SAO",
-    "destination": "BUE",
+    "origin": "GRU",
+    "destination": "EZE",
     "departure_date": "2027-04-15"
   },
   {
-    "origin": "SAO",
+    "origin": "GRU",
     "destination": "REC",
     "departure_date": "2027-05-10"
   }
